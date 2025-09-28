@@ -1,0 +1,6 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.reg text eol=crlf working-tree-encoding=UTF-16LE-BOM
+*.bat eol=crlf
+
+
