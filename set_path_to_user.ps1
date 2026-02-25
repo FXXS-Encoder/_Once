@@ -88,7 +88,7 @@ if ($PathsActuallyAdded.Count -gt 0) {
 
     # 构建新的Path字符串
     # 将现有路径和新路径合并，并确保没有重复 (虽然前面检查了，但多一层保险，并处理顺序)
-    $NewPathArray = $CurrentPathArray + $PathsActuallyAdded | Select-Object -Unique
+    $NewPathArray = $PathsActuallyAdded + $CurrentPathArray | Select-Object -Unique
     $NewUserPathString = $NewPathArray -join ';'
 
     try {
